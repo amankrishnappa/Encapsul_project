@@ -1,0 +1,55 @@
+
+public class Employee {
+	private int employeeId;
+	private String Name;
+	private int age;
+	private double salary;
+	
+	public Employee( String Name,int age,double salary ){
+		this.employeeId = employeeId;
+		this.Name=Name;
+		this.age=age;
+		this.salary=salary;
+	}
+	
+	public void setAge (int age)
+	{
+		if (age>0 && age<120)
+		{
+			this.age=age;
+		}
+		else
+			System.out.println("Invlaid age");
+	}
+	public int getAge()
+	{
+		return age;
+	}
+	
+	public void setSalary(double salary)
+	{
+		if (salary>=500000 && salary<=1000000)
+		{
+			this.salary=salary;
+		}
+		else 
+			System.out.println("Invalid salary");
+		}
+	
+		public double getSalary()
+		{
+			return salary;
+	}
+
+		public void display()
+		{
+			System.out.println(  " Name: " + Name + " age: " + age +"Salary"+ salary);
+		}
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Employee e1= new Employee("Ram",52,700000);
+		Employee e2= new Employee("Sita",54,800000);
+		e1.display();
+		e2.display();
